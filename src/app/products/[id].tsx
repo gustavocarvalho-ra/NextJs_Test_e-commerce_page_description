@@ -1,5 +1,4 @@
 import { GetStaticProps, GetStaticPaths } from "next";
-import { produc } from "../types/prod";
 import dat from "../data/dat.json";
 import { produc } from './../types/prod.d';
 import Image from "next/image";
@@ -30,3 +29,16 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: false
   };
 };
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const id = context.params?.id as string;
+  const product = dat.find(p => p.id === id) || null;
+
+  return {
+    props: {
+      product
+    }
+  };
+};
+
+export default ProductDetail;
