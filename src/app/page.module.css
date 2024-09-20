@@ -21,11 +21,6 @@
 }
 
 .btn {
-  width: 90%;
-  height: 20%;
-  background: beige;
+  font-size: 12px;
 
-  &:hover {
-    background: blue;
-  }
 }

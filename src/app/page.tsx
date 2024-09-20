@@ -16,12 +16,11 @@ export default function Home() {
       {produc.map(item => (
         <div className={styles.card} key={item.id}>
           <h1>{item.name}</h1>
-          <button className={styles.btn}>
-            <Link href={{
-              pathname: "./products",
-              query: { id: item.id }
-            }}/>
-          </button>
+          <li className={styles.btn}>
+            <Link href={`/products/${item.id}`}>
+              <ul>{item.name}</ul>
+            </Link>
+          </li>
 
         </div>
 
