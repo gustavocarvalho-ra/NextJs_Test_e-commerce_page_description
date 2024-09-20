@@ -13,7 +13,7 @@ export default function Home() {
     <div className={styles.page}>
       <h2>test</h2>
 
-      {produc.map(item => (
+      {/* {produc.map(item => (
         <div className={styles.card} key={item.id}>
           <h1>{item.name}</h1>
           <li className={styles.btn}>
@@ -24,7 +24,17 @@ export default function Home() {
 
         </div>
 
-      ))}
+      ))} */}
+
+      <ul>
+        {produc.map((product) => (
+          <li key={product.id}>
+            <Link href={`/products/${product.id}`}>
+              <p>{product.name}</p>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
