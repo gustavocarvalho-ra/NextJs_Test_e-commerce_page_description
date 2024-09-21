@@ -1,5 +1,5 @@
 export interface Produc {
-  id: string;
+  id: number;
   name: string;
   price: string;
   photo: string;

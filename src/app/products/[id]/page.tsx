@@ -13,17 +13,25 @@ import { Produc } from '../../types/prod';
 //   price: number;
 // }
 
+// const dat = [
+//   {id: 1, name: "Test", price: "200", type: "calça"}
+// ]
+
 interface Props {
-  produto: Produc | null;
+  params: {
+    id: string
+  };
 }
 
 // const ProductDetail: React.FC<Props> = ({ produto }) => {
-const ProductDetail: React.FC = () => {
+const ProductDetail: React.FC<Props> = ({ params }) => {
   const { query } = useRouter();
   const id = query.id as string;
 
-  if (!produto) return <div>Produto não encontrado</div>;
+  const produto = data?.find((prod: Produc) => prod.id === parseInt(id));
 
+  if (!produto) return <div>Produto não encontrado</div>;
+   
   return (
     <div>
       {/* <h1>{produto.name}</h1> */}

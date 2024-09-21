@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "name": "Calça Cargo",
     "price": "190.99",
     "photo": "/calcaCargoLaco.jpeg",
@@ -8,7 +8,7 @@
     "des": "0.25"
   },
   {
-    "id": "2",
+    "id": 2,
     "name": "Calça Jogger",
     "price": "180.59",
     "photo": "/calcaJogger.jpeg",
