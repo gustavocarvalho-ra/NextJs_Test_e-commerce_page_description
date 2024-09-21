@@ -1,4 +1,4 @@
-export interface produc {
+export interface Produc {
   id: string;
   name: string;
   price: string;
